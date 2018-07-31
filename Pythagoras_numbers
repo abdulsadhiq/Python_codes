@@ -1,0 +1,25 @@
+#METHOD 1:
+# Using Loop
+# int() is the key function here
+
+########################################START########################################
+from math import sqrt
+n = int(input("Input Range"))
+for a in range(1,n+1):
+    for b in range(a,n):
+        c_square = a**2 + b**2
+        c = int(sqrt(c_square))
+        if ((c_square - c**2) == 0):
+            print(a, b, c)
+########################################END########################################
+
+
+
+#METHOD 2:
+# Using List comprehension
+# Make sure to assign it to a variable, else additional NULL values printed
+
+########################################START########################################
+from math import sqrt
+pyt=[print(a,b,sqrt(a**2+b**2)) for a in range(1,100) for b in range(a,100) if sqrt(a**2 + b**2)==int(sqrt(a**2 + b**2))]
+########################################END########################################
