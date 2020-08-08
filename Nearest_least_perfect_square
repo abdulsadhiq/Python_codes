@@ -1,0 +1,13 @@
+print("Please enter a number:")
+x=int(input())
+x_rt=x**0.5
+if x<0:
+    print('Nearest perfect square is: 0')
+elif x_rt==int(x_rt):
+    print('Nearest perfect square is:',x)
+else:
+    while(x_rt!=int(x_rt)):
+        x=x-1
+        x_rt=x**0.5
+        if x_rt==int(x_rt):
+            print('Nearest perfect square is:',x)
